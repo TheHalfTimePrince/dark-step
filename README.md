@@ -2,6 +2,10 @@
 
 Dark Step is a powerful and intuitive web-based step sequencer built with Next.js and Tone.js. It offers a unique and engaging way to create music directly in your browser, featuring multiple instruments and a visually appealing interface.
 
+## Demo
+
+[Live Demo](https://dark-step-a013f.web.app/)
+
 ## Features
 
 - Multi-instrument support: Drums, Bass, Chord Synth, Poly Synth, Sampler, and Playable Lead
