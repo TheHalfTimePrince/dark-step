@@ -2,32 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  @keyframes glowing {
+    0% {
+        box-shadow: rgba(255, 255, 255, 0) 0 0 0px 0px;
+    }
+    70% {
+        box-shadow: rgba(255, 255, 255, 0.8) 0 0 90px 33px;
+    }
+    100% {
+        box-shadow: rgba(255, 255, 255, 0) 0 0 0px 0px;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.bursting-effect::after{
+    animation: glowing 2s infinite;
+    z-index: 100;
+}
+
+.gradientText{
+  background: linear-gradient(45deg,  #ff7d66, #ff6a6a,#ccdddf, #7272ff);
+  background-size: 400% 400%;
+  animation: gradientChange 20s infinite linear;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bgGradient{
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(31,41,55,1) 70%);
+}
+
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.burst {
+  animation: burstAnimation 0.5s 1 ease-out forwards;
+  z-index: 1;
+
   }
-}
+
+  @keyframes burstAnimation {
+    0% {
+      scale: 1;
+      background-color: #9E2B25;
+    }
+    100% {
+      background-color: transparent;
+      background-opacity: 0;
+      scale: 3.5;
+    }
+
+  }
+
+  .fade{
+    animation: fadeAnimation 1.5s 1 ease-out forwards; 
+    z-index: 2;
+  }
+@keyframes fadeAnimation {
+    0% {
+      background-color: rgb(255 255 255 / 0.8);
+      scale: 0;
+    }
+    100% {
+      scale: 1.3;
+      background-color: transparent;
+    }
+
+  }
+
+  .window-burst{
+    animation: windowBurst 1s 1 ease-in-out forwards;
+    z-index: 2;
+  }
+  .window-fade{
+    animation: windowFade 1s 1 ease-in-out forwards;
+    z-index: 2;
+  }
+
+  @keyframes windowFade {
+    0% {
+      background-color: rgb(255 255 255 / 0.4);
+      scale: 1;
+    }
+    100% {
+      scale: 0;
+      background-color: transparent;
+    }
+
+  }
+
+  @keyframes windowBurst {
+    0% {
+      background-color: #9E2B25;
+      scale: 1;
+    }
+    100% {
+      scale: 0;
+      background-color: transparent;
+    }
+
+  }

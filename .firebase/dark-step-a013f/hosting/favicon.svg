@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .16;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #d04039;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        opacity: .33;
+      }
+
+      .cls-3 {
+        opacity: .35;
+      }
+
+      .cls-5 {
+        fill: #1f2937;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" width="500" height="500"/>
+  <circle class="cls-2" cx="250" cy="250" r="199.09"/>
+  <circle class="cls-3" cx="250" cy="250" r="156.76"/>
+  <circle class="cls-1" cx="250" cy="250" r="113.62"/>
+  <circle class="cls-4" cx="250" cy="250" r="73.68"/>
+</svg>
